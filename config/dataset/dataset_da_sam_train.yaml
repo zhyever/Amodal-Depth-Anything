@@ -1,0 +1,10 @@
+
+dataset:
+  train:
+    name: sam
+    disp_name: sam_train
+    filenames: data_split/sam/train.txt
+    move_invalid_to_far_plane: False
+    resize_to_hw:
+    - 518
+    - 518

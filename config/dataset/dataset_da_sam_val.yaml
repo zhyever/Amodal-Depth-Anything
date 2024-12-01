@@ -1,0 +1,9 @@
+dataset:
+  val:
+  - name: sam
+    disp_name: sam_val_80
+    filenames: data_split/sam/val_sub.txt
+    move_invalid_to_far_plane: False
+    resize_to_hw:
+    - 518
+    - 518

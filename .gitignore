@@ -1,0 +1,14 @@
+*__pycache__*
+sandbox
+*.ckpt
+*-depth.png
+/dcgm
+/work_dir
+/data
+.vscode
+/ibex_scripts
+/ibex_scripts_old
+/CLIP
+/pix2gestalt
+/taming-transformers
+/.ipynb_checkpoints
