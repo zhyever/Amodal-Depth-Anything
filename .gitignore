@@ -11,4 +11,5 @@ sandbox
 /CLIP
 /pix2gestalt
 /taming-transformers
-/.ipynb_checkpoints
+.ipynb_checkpoints
+*.ipynb_checkpoints*
