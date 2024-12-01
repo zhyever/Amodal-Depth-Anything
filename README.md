@@ -16,7 +16,7 @@
 </div>
 
 ## ✨ **NEWS**
-- 2024-12-01: Initially release [project page](https://zhyever.github.io/amodaldepthanything/), [paper](tbd), [codes](here), and [offline demo](here).
+- 2024-12-01: Initially release [project page](https://zhyever.github.io/amodaldepthanything/), [paper](tbd), [codes](https://github.com/zhyever/Amodal-Depth-Anything), and [offline demo](https://github.com/zhyever/Amodal-Depth-Anything).
 
 ## 💻 **Environment setup**
 
