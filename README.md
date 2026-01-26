@@ -55,8 +55,8 @@ pip install -e CLIP/
 ### Pretrained Models
 | Model | Checkpoint |  Description | 
 |:-|:-:| :-:| 
-| Base Depth-Anything-V2 Model | [Download](https://huggingface.co/zhyever/Amodal-Depth-Anything/resolve/main/base_depth_model/amodal_depth_anything_base.pth) | Base depth model. Save to `work_dir/ckp/amodal_depth_anything_base.pth` |
-| Amodal-Depth-Anything Model | [HuggingFace Model](https://huggingface.co/zhyever/Amodal-Depth-Anything-DAV2h) | Amodal depth model. Automatically downloading |
+| Base Depth-Anything-V2 Model | [Download](https://huggingface.co/zhyever/Amodal-Depth-Anything-DAV2/blob/main/amodal_depth_anything_base.pth) | Base depth model. Save to `work_dir/ckp/amodal_depth_anything_base.pth` |
+| Amodal-Depth-Anything Model | [HuggingFace Model](https://huggingface.co/zhyever/Amodal-Depth-Anything-DAV2) | Amodal depth model. Automatically downloading |
 | SAM | [Download](https://gestalt.cs.columbia.edu/assets/sam_vit_h.pth) | Segmentation model. Save to `work_dir/ckp/pix2gestalt/sam_vit_h.pth` |
 | pix2gestalt | [Download](https://gestalt.cs.columbia.edu/assets/sd-image-conditioned-v2.ckpt) | Amodal segmentation model. Save to `work_dir/ckp/pix2gestalt/epoch=000005.ckpt` | 
 
