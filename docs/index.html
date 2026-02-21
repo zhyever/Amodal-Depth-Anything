@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Amodal-Depth-Anything">
+  <meta name="keywords" content="Amodal-Depth-Anything">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amodal-Depth-Anything</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="./static/css/bootstrap-4.4.1.css">
+  
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+  
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./images/website.png">
+  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/app.js"></script>
+  <script src="./static/js/video_comparison.js"></script>
+
+  <link rel="stylesheet" href="./static/css/dics.original.css">
+  <script src="./static/js/event_handler.js"></script>
+  <script src="./static/js/dics.original.js"></script>
+
+  <script src="https://kit.fontawesome.com/e8d9e5563c.js" crossorigin="anonymous"></script> 
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title" style="margin-bottom: 0"><strong>Amodal Depth Anything</strong></h1>
+          <h2 class="title is-3 publication-title" style="margin-top: 0; margin-bottom: 0">Amodal Depth Estimation in the Wild</h2>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://zhyever.github.io/">Zhenyu Li</a><sup>1</sup>,  </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=-oFR-RYAAAAJ&hl=en">Mykola Lavreniuk</a><sup>2</sup>,  </span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/jian-shi-1ba543110/?originalSubdomain=cn">Jian Shi</a><sup>1</sup>,  </span>
+            <span class="author-block">
+              <a href="https://shariqfarooq123.github.io/">Shariq Farooq Bhat</a><sup>1</sup>,  </span>
+            <span class="author-block">
+              <a href="https://peterwonka.net/">Peter Wonka</a><sup>1</sup>
+            </span>
+            <!-- <span class="author-block">
+              Paper 4564
+            </span> -->
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>KAUST</span>   &nbsp;  
+            <span class="author-block"><sup>2</sup>Space Research Institute NASU-SSAU</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- Paper Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2412.02336" 
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/zhyever/Amodal-Depth-Anything"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            
+              <span class="link-block">
+                <a href="https://github.com/zhyever/Amodal-Depth-Anything"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <!-- <i class="fab fa-github"></i> -->
+                      <!-- <i class="fa-solid fa-person-digging"></i> -->
+                      🤗
+                  </span>
+                  <span>Offline Demo</span>
+                  </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://huggingface.co/spaces/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <!-- <i class="fab fa-github"></i> -->
+                      <!-- <i class="fa-solid fa-person-digging"></i> -->
+                      🤗
+                  </span>
+                  <span>Online Demo (TBD)</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+          <div style="text-align:center;">
+			<img src="./images/teaser.jpg" alt="left" width="110%">
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" style="margin-top: -30px">Overview</h2>
+        <div class="content has-text-justified">
+          <p>
+            We present <strong>ADIW</strong>, a comprehensive dataset created to train models on amodal depth estimation using real-world data. Through an innovative compositing approach, we leverage segmentation datasets to enable scalable, high-quality depth annotations, adapting the powerful Depth Anything V2 model for enhanced occlusion handling.
+            Our work introduces two distinct frameworks for relative depth estimation: <strong>Amodal-DAV2</strong> for deterministic models and <strong>Amodal-DepthFM</strong> for generative models. Both frameworks integrate guidance signals and pre-trained large-scale models to achieve precise depth estimations in occluded areas.
+          </p>
+          <p>Experimental results validate our method as SoTA for amodal depth estimation on ADIW, showing strong performance across real-world images and adaptability to complex occlusions.</p>
+          <ol style="text-align: left; margin-top: 15px;">
+            <li><strong>Novel task formulation:</strong> Amodal depth estimation with a focus on relative depth, providing improved generalization.</li>
+            <li><strong>ADIW dataset:</strong> A large-scale dataset generated from real-world images with advanced compositing and alignment techniques.</li>
+            <li><strong>Innovative frameworks:</strong> Amodal-DAV2 and Amodal-DepthFM, achieving high-quality predictions using minimal modifications to pre-trained models.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="Amodal Depth results">
+  <div class="container is-max-desktop">
+
+    <!-- Results. -->
+    <div class="columns is-centered ">
+      <div class="column is-full-width">
+        <br>
+        <h2 class="title is-3 has-text-centered" style="margin-top: -30px">👀 Interactive Comparison Tool</h2>        
+        <p style="text-align:center; " class="has-text-centered">
+            Slide to explore RGB, general depth, and amodal depth representations in real-world zero-shot samples.
+          <br>
+        </p>
+        <!--
+		<p style="text-align:center; " class="has-text-centered">
+          <h2 class="title is-4">Zero-Shot Amodal Depth Transfer on Real-World Samples</h2>
+        </p>
+		-->
+        <br>
+        
+        <!-- For more information about how this works, please check: amodal_depth_submission\static\js\event_handler.js -->
+        <div class="container">
+          <ul class="nav nav-tabs nav-fill nav-justified" id="object-scale-recon">
+              <li class="nav-item">
+                <a class="nav-link active" onclick="objectSceneEvent(0)">Example 1</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="objectSceneEvent(1)">Example 2</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="objectSceneEvent(2)">Example 3</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="objectSceneEvent(3)">Example 4</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="objectSceneEvent(4)">Example 5</a>
+              </li>
+          </ul>
+          <div class="b-dics" style="width: 1000px; font-weight: 600;">
+              <img src="images/zs1.jpg" alt="RGB">
+              <img src="images/zs1_raw.png" alt="General Depth">
+              <img src="images/zs1_pred.png" alt="Amodal Depth"> 
+          </div>
+        </div>
+
+        <br>
+      
+      </div>
+    </div>
+
+  </div>
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" style="margin-top: -30px">Method</h2>
+        <div class="content has-text-justified">
+          
+          <h3>Task Definition</h3>
+          <p>
+            Amodal depth estimation extends traditional amodal segmentation by predicting depth for occluded areas. Unlike prior work, which focused on <em>metric</em> depth estimation, our approach estimates <em>relative</em> depth values, allowing for more adaptable depth predictions across real-world scenarios. Given an input image, observed depth map, and an amodal segmentation mask, our objective is to predict consistent occluded region depths.
+          </p>
+
+          <h3>Dataset Collection</h3>
+          <p>
+            We present the <strong>ADIW</strong> dataset, a large-scale, real-world dataset designed for amodal depth estimation. To create training data, we overlay segmented objects onto natural images to simulate occlusions. Since foreground objects obscure background depth, we use scale-and-shift alignment to harmonize depth values between composite and background images.
+          </p>
+
+          <figure style="text-align: center;">
+            <img src="images/dataset.jpg" alt="Dataset Construction" width="80%">
+          </figure>
+
+          <h3>Amodal Depth Estimator</h3>
+          <p>
+            To adapt large pre-trained models for amodal depth estimation, we minimally adjust their architectures for predicting occluded region depth. Our approach focuses on two model types:
+          </p>
+          <ol>
+            <li><strong>Amodal-DAV2:</strong> This deterministic model uses Depth Anything V2, adding guidance channels for occluded areas and optimizing through scale-invariant loss.</li>
+            <li><strong>Amodal-DepthFM:</strong> Built on DepthFM, this generative model adapts conditional flow matching, leveraging added channels for occlusion-specific guidance.</li>
+          </ol>
+
+		
+          <figure style="text-align: center;">
+            <img src="images/framework_1.png" alt="Amodal-DAV2 Structure" width="80%">
+            <figcaption><strong>Amodal-DAV2:</strong> Modified DAV2 image encoder to take additional guidance channels.</figcaption>
+          </figure>
+
+          <p>
+            For improved depth map consistency, we employ scale-and-shift alignment, blending model output with observed depth maps over shared regions to enhance depth coherence in occluded areas.
+          </p>
+          <figure style="text-align: center;">
+            <img src="images/framework_2.png" alt="Amodal-DAV2 Structure" width="80%">
+            <figcaption><strong>Amodal-DepthFM:</strong> DepthFM structure with modifications for latent space guidance.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" style="margin-top: -30px">Results</h2>
+        <div class="content has-text-justified">
+          <p>We compare our methods against other possible solutions on ADIW Dataset. †: Models retrained on our dataset for fair comparison. ‡: Scale-and-shift alignment applied for consistent prediction handling. Note that Amodal-DAV2 does not rely on this alignment approach.</p>
+          <figure style="text-align: center;">
+            <img src="images/results.jpg" alt="Results" width="100%">
+          </figure>
+		  <p><strong>Visual Comparisons on the ADIW Validation Set</strong> </p>
+		  <p>Invisible Stitch, using a metric depth model, shows depth shifts compared to relative depth methods. Our Amodal-DAV2-L maintains the most accurate scale, shape, and detail.</p>
+          <figure style="text-align: center;">
+            <img src="images/results2.jpg" alt="Results" width="100%">
+          </figure>
+      <p><strong>Visual Comparisons in the wild</strong> </p>
+      <p>Our amodal depth models directly regress the depth of invisible parts without relying on RGB information, using only the amodal mask as guidance. These results demonstrate that our approach provides strong geometric priors, which could also serve as a useful condition for inpainting.</p>
+          <figure style="text-align: center;">
+            <img src="images/results3.jpg" alt="Results" width="100%">
+          </figure>
+      
+      <p><strong>Reconstructed 3D Mesh for Occluded Object</strong> </p>
+      <p>Blue arrows indicate the target object and red arrows highlight the reconstructed meshes for occluded parts of objects, respectively. Left: Input image. Middle: Mesh from general depth. Right: Reconstructed mesh combining general depth and amodal depth.</p>
+          <figure style="text-align: center;">
+            <img src="images/mesh.png" alt="Results" width="100%">
+          </figure>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3  has-text-centered">🔥 Citation</h2>
+            <div class="language-css">
+            <pre style="">
+<code>@article{li2024amodaldepthanything,
+  title={Amodal Depth Anything: Amodal Depth Estimation in the Wild}, 
+  author={Li, Zhenyu and Lavreniuk, Mykola and Shi, Jian and Bhat, Shariq Farooq and Wonka, Peter},
+  year={2024},
+  journal={arXiv preprint arXiv:x},
+  primaryClass={cs.CV}}</code></pre>  
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+            This webpage template is from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> and Mip-Splatting<a href="https://niujinshuchong.github.io/mip-splatting/">. 
+            We sincerely thank <a href="https://keunhong.com/">Keunhong Park</a> and <a href="https://niujinshuchong.github.io/">Zehao Yu</a> for developing and open-sourcing this template.  
+            The image comparison with sliding bar is from <a href="https://research.nvidia.com/labs/dir/neuralangelo/">Neuralangelo</a> and <a href="https://jugghm.github.io/Metric3Dv2/">Metric3D V2</a>. 
+          </p>
+        </div>
+      </div>
+          <p></p>
+        </div>
+      </div>
+</footer>
+
+
+
+</body>
+</html>

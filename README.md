@@ -2,7 +2,7 @@
 <h1>Amodal Depth Anything </h1>
 <h3>Amodal Depth Estimation in the Wild</h3>
 
-[![Website](assets/badge-website.svg)](https://zhyever.github.io/amodaldepthanything/) [![Paper](https://img.shields.io/badge/arXiv-PDF-b31b1b)](tbd)  [![Hugging Face Model](https://img.shields.io/badge/🤗%20Hugging%20Face-Model-yellow)](https://huggingface.co/zhyever/Amodal-Depth-Anything-DAV2) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Website](assets/badge-website.svg)](https://zhyever.github.io/Amodal-Depth-Anything/) [![Paper](https://img.shields.io/badge/arXiv-PDF-b31b1b)](tbd)  [![Hugging Face Model](https://img.shields.io/badge/🤗%20Hugging%20Face-Model-yellow)](https://huggingface.co/zhyever/Amodal-Depth-Anything-DAV2) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 <!-- [![Hugging Face Space](https://img.shields.io/badge/🤗%20Hugging%20Face-Space-yellow)](tbd) -->
 
@@ -16,7 +16,7 @@
 </div>
 
 ## ✨ **NEWS**
-- 2024-12-01: Initially release [project page](https://zhyever.github.io/amodaldepthanything/), [paper](tbd), [codes](https://github.com/zhyever/Amodal-Depth-Anything), and [offline demo](https://github.com/zhyever/Amodal-Depth-Anything).
+- 2024-12-01: Initially release [project page](https://zhyever.github.io/Amodal-Depth-Anything/), [paper](tbd), [codes](https://github.com/zhyever/Amodal-Depth-Anything), and [offline demo](https://github.com/zhyever/Amodal-Depth-Anything).
 
 ## 💻 **Environment setup**
 
