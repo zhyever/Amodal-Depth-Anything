@@ -126,6 +126,3 @@ Simply open the local URL in your browser to start the demo.
 }
 ``` -->
 
-## **TBD**
-- 2024-12-01: Online Gradio Demo
-- 2024-12-01: Dataset Preparation and Training Docs
